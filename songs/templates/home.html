@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <audio src="{{correct.preview_url}}" controls autoplay></audio>
+    {% for song in song_titles %}
+        <button onclick='checkAnswer("{{song.title}}", "{{correct.title}}")'>{{song.title}}</button>
+    {% endfor %}
+    <br>
+    <button onclick="refresh()">NEXT</button>
+</body>
+
+<script>
+    function checkAnswer(song, correctSong){
+        console.log(12)
+        if (song.toLowerCase() == correctSong.toLowerCase()){
+            alert("That's Right!")
+        }
+        else{
+            alert("Incorrect!")
+        }
+    }
+    function refresh(){
+        location.reload(true)
+    }
+</script>
+
+</html>
+
+
