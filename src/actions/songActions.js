@@ -1,7 +1,8 @@
 import {SONGS_FAIL, SONGS_REQUEST, SONGS_SUCCESS} from '../constants/songConstants'
 
 import axios from 'axios'
-
+axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 export const songList = (artist) => async (dispatch)=>{
     if (artist=='all'){
         artist=''

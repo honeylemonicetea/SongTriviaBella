@@ -8,6 +8,9 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.template.defaultfilters import slugify
 from .tools.playlist_parser import get_all_songs
+from django.views import View
+from django.http import HttpResponse, HttpResponseNotFound
+import os
 import json
 # Create your views here.
 def set_songs(req):
@@ -91,3 +94,15 @@ def playlist_songs(req, artist=''):
     random.shuffle(song_titles)
     final = {'correct': correct, "all_songs": song_titles}
     return Response(final)
+
+
+class Assets(View):
+
+    def get(self, _request, filename):
+        path = os.path.join(os.path.dirname(__file__), 'static', filename)
+
+        if os.path.isfile(path):
+            with open(path, 'rb') as file:
+                return HttpResponse(file.read(), content_type='application/javascript')
+        else:
+            return HttpResponseNotFound()

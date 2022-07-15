@@ -1,7 +1,8 @@
 import {PLAYLIST_FAIL, PLAYLIST_REQUEST, PLAYLIST_SUCCESS} from '../constants/playlistConstants'
 import axios from 'axios'
 import { SONGS_FAIL } from '../constants/songConstants'
-
+axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 export const playList = () => async(dispatch) =>{
     try {
         dispatch({type: PLAYLIST_REQUEST})
