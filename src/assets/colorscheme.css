@@ -1,0 +1,12 @@
+.fake{
+
+    background-color: #bde0fe;  /*BACKGROUND*/
+    background-color: #a2d2ff;  /*ACCENT COLOR*/
+
+    background-color: #ffc8dd;  /*cONTASTING ACCENT COLOR*/
+    background-color: #ffafcc;  /*DARKER CONTRAST*/
+
+
+    background-color: #80ff8c; /*CORRECT ANSWER*/
+    background-color: #e56b6f; /*INCORRECT ANSWER*/
+}

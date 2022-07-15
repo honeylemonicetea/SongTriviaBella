@@ -1,0 +1,10 @@
+.menu-container{
+  background-color: #79a6d1;
+  padding: 1% 30%;
+}
+
+.menu-inner a{
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}

@@ -1,0 +1,23 @@
+@media (max-width: 400px) {
+    /* menu */
+    .menu-container{
+        padding: 2% 40%;
+    }
+    .menu-container a{
+        font-size: 1.5em 
+    }
+
+
+    .playlist-container{
+        grid-template-columns: 1fr;
+        padding: 3% 0;
+    }
+    
+    .game-inner{
+        width: 100%;
+    }
+    .button-container{
+        width: 95%;
+        font-size: 1.3em;
+    }
+}
