@@ -21,6 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
@@ -85,11 +86,10 @@ WSGI_APPLICATION = 'songpop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'CONN_MAX_AGE': 500
-    }
-}
+DATABASES = {}
+
+
+
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 
@@ -144,5 +144,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 django_heroku.settings(locals())
 
-options = DATABASES['default'].get('OPTIONS', {})
-options.pop('sslmode', None)
+# options = DATABASES['default'].get('OPTIONS', {})
+# options.pop('sslmode', None)
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'newsampledb', # The Server name from 1.5
+        'USER': 'postgres', # The username from 1.6
+        'PASSWORD': 'admin', # The password from installation
+        # 'HOST': 'localhost', # Host name/address from 1.6,
+        # 'PORT': '5432' # Port from 1.6
+    }
+}
