@@ -20,6 +20,7 @@ function Song4(props) {
     useEffect(() => {
         if (props.audio_src){
           console.log(audioRef.current.volume)
+          audioRef.current.muted = false
           audioRef.current.volume = 0.15
           audioRef.current.play()  //AUTOPLAY!!!
         }
@@ -74,17 +75,18 @@ function Song4(props) {
     // console.log(props.song_titles)
   return (
     <div className="song-wrapper">
-      <iframe
+      {/* <iframe
         allow="autoplay"
         src={silence}
         style={{ display: "none" }}
-      ></iframe>
+      ></iframe> */}
       <audio
         src={props.audio_src}
         controls
-        autoPlay={false}
+        autoPlay={true}
         ref={audioRef}
         className="audio-player"
+        muted='muted'
       />
 
       <div className="button-container">
@@ -114,6 +116,7 @@ function Song4(props) {
         </button>
       </div>
       <p className="reveal">{answer}</p>
+
     </div>
   );
 }

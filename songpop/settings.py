@@ -147,13 +147,21 @@ django_heroku.settings(locals())
 # options = DATABASES['default'].get('OPTIONS', {})
 # options.pop('sslmode', None)
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'newsampledb', # The Server name from 1.5
+#         'USER': 'postgres', # The username from 1.6
+#         'PASSWORD': 'admin', # The password from installation
+#         # 'HOST': 'localhost', # Host name/address from 1.6,
+#         # 'PORT': '5432' # Port from 1.6
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'newsampledb', # The Server name from 1.5
-        'USER': 'postgres', # The username from 1.6
-        'PASSWORD': 'admin', # The password from installation
-        # 'HOST': 'localhost', # Host name/address from 1.6,
-        # 'PORT': '5432' # Port from 1.6
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
     }
 }
