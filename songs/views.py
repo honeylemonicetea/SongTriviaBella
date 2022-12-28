@@ -17,11 +17,11 @@ from .tools.get_audio import get_song
 
 GENERAL = '3pQuUtPiyu4YPKfqWhWilO'
 GREG_EDITION = '46mUjJfBD6sCY5WiW6vOog'
+BELLA_EDITION = '0RGnFMea6kT6T2osSiKSEK'
 
 
-URL = f'https://api.spotify.com/v1/playlists/{GREG_EDITION}/tracks?limit=100'
 headers = {
-    'Authorization': 'Bearer BQA5mVs0qA4lnDDLL22p8FWABy0e7DQcLBQrCrTK86DtwHk-4OtnANYW0g7oKAx3fKFb_UfI2prUdHrx0iN9evLbnEqd8tWGe9z-JFYwfpn8hAiux1sRa9yFxYcWoUriOXlykdTQInLFDXqx_Brpwikuduec4lGTWB1Ibg55BqL9eZoyrGRKpfmIRRTmOik'}
+    'Authorization': 'Bearer BQAjOHBebKibdtQY4EQHQlrY7ce7nP5p-BFqzNdeiuXXus1bvdrrjR07ChjV9KPrx3n872M6_G1n4fmBD1aQU4BHKYyvgdvjOf61WjU8QdUhZ0rTPEf6NzB5pBxj1Siy71D61CvgMT2qMyquJ9kfvhV5xOet-LxdnibXMxed9l0ydHjzMIMEfI3ZYqVan1g'}
 
 
 # Create your views here.
@@ -52,7 +52,7 @@ def populate_db_fromspot(req):
     for i in range(7):
 
         req = requests.get(
-            f'https://api.spotify.com/v1/playlists/{GREG_EDITION}/tracks?limit=100&offset={i * 100}',
+            f'https://api.spotify.com/v1/playlists/{BELLA_EDITION}/tracks?limit=100&offset={i * 100}',
             headers=headers)
 
         result = req.json()['items']
