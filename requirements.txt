@@ -1,8 +1,6 @@
-arcade==2.6.13
 asgiref==3.5.1
 attrs==21.4.0
 certifi==2022.6.15
-cffi==1.15.0
 charset-normalizer==2.1.0
 cryptography==37.0.4
 dj-database-url==0.5.0
@@ -10,11 +8,8 @@ Django==3.2.16
 djangorestframework==3.13.1
 gunicorn==20.1.0
 idna==3.3
-Pillow==9.0.1
-psycopg2==2.9.3
 pycparser==2.21
 pyglet==2.0a2
-pymunk==6.2.1
 pyOpenSSL==22.0.0
 python-dotenv==0.20.0
 pytiled-parser==2.0.1
