@@ -1,5 +1,5 @@
 from models import Song
-with open('song_l_previews.txt', encoding='utf-8') as file:
+with open('song_previews.txt', encoding='utf-8') as file:
     songs = file.readline()
     for line in songs:
         song_info_raw = line.strip()

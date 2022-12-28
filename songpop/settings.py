@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
+# import django_heroku
 import dotenv
 import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +26,7 @@ if os.path.isfile(dotenv_file):
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-j4b43j(9w7#fplqt9p-u9hhxk_z^)n2m0i=9h-1-wlpym4biyu'
+SECRET_KEY = 'django-insecure-j4b43j(9w7#fplqt9p-u9hhxk_z^)n2m0i=9h-1-wlpym4biyu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -142,7 +142,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 # options = DATABASES['default'].get('OPTIONS', {})
 # options.pop('sslmode', None)
@@ -160,8 +160,12 @@ django_heroku.settings(locals())
 
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': 'db.sqlite3',
+    # }
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite3',
+        'NAME': 'test_db.sqlite3',
     }
 }

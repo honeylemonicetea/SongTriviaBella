@@ -6,7 +6,7 @@ import Song4 from '../components/Song4'
 
 import '../Styles/GameScreen.css'
 
-function GameScreen() {
+function GameScreen(props) {
     let params = useParams()
 
 
@@ -17,6 +17,7 @@ function GameScreen() {
     // localStorage.setItem('wrong', "0")
     let cor = localStorage.getItem('correct')
     let wrong = localStorage.getItem("wrong");
+   
 
     useEffect(() => {
         dispatch(songList(params.artist_slug));
@@ -31,7 +32,9 @@ function GameScreen() {
       <div className='game-container'>
         <div className="game-inner">
 
-          <h1>SONGS</h1>
+          <h1>{songs.name}</h1>
+          {/* <img src={songs.cover_img} className='playlist_cover'/> */}
+          <div className="playlist_cover" style={{backgroundImage:`url(${songs.cover_img})`}}></div>
           <p>
             {" "}
             <b>Correct: </b>

@@ -4,12 +4,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
+    background-image: linear-gradient(#ebf4f5,#b5c6e0);
 }
 .game-inner{
     width: 70%;
     text-align: center;
-    height: 60%;
+    height: 85%;
+}
+    .game-inner h1{
+        margin: 2% 0;
+    }
+    .game-inner p{
+        margin: 1% 0;
+    }
+
+.playlist_cover{
+    width: 15vw;
+    height: 15vw;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+
+    border-radius: 6px;
 }
 
 .button-container{
@@ -23,7 +40,7 @@
 
 
 .button-container button, .next-btn{
-    background-color: #ffc8dd;
+    background-color: #ffffff;
     padding: 15px;
     border-radius: 4px;
     border: 1px solid grey;
@@ -40,7 +57,7 @@
 
 
 .next-btn{
-    background-color: #006bce;
+    background-color: #74bfe590;
     color: white;
     font-weight: bold;
     margin: 1%;

@@ -12,6 +12,8 @@ import store from './app/store'
 import HomeScreen from './screens/HomeScreen'
 import GameScreen from './screens/GameScreen'
 import Header from './components/Header'
+import PlayListScreen from './screens/PlayListScreen';
+import UnderConstruction from './screens/UnderConstruction';
 
 
 function App() {
@@ -24,7 +26,9 @@ function App() {
         <Header></Header>
           <Routes>
             <Route path='' element={<HomeScreen/>} />
+            <Route path='/playlists' element={<PlayListScreen/>}/>
             <Route path='/play/:artist_slug' element={<GameScreen/>}/>
+            <Route path='/under-construction' element={<UnderConstruction/>}/>
           </Routes>
       </div>
     </Router>

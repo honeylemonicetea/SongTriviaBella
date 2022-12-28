@@ -1,10 +1,43 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* MENU STYLES */
+
+
+
+
+
 .menu-container{
-  background-color: #79a6d1;
-  padding: 1% 30%;
+  background-color: #74bfe590;
+  padding: 1% 25%;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+  /* color: #80ff8c; */
+  
+}
+
+.menu-inner{
+  display: flex;
+  width: 100%;
+}
+
+.menu-inner-mobile{
+  display: none;
 }
 
 .menu-inner a{
   color: white;
   font-weight: bold;
   font-size: 1.2em;
+  flex-grow: 1;
+}
+
+.burger-icon, .close-icon{
+  display: none;
 }
