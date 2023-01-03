@@ -153,8 +153,10 @@ def get_playlist(req, artist=''):
 # GENERATE A SET OF SONGS BY A SPECIFIC ARTIST
 @api_view(['GET'])
 def playlist_songs(req, artist=''):
-    if artist == '':
+    print(f"HEY THERE {artist}")
+    if artist == 'all':
         songs = Song.objects.all()
+        print(songs)
     else:
         songs = Song.objects.all().filter(artist_slug=artist)
     correct_answer = random.choice(songs)

@@ -4,11 +4,12 @@ import axios from 'axios'
 axios.defaults.xsrfCookieName = 'csrftoken'
 axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 export const songList = (artist) => async (dispatch)=>{
-    if (artist=='all'){
-        artist=''
-    }
+    // if (artist=='all'){
+    //     artist=''
+    // }
     try{
         dispatch({type: SONGS_REQUEST})
+
         const {data} = await axios.get(`/api/generate/${artist}`)
         dispatch({type:SONGS_SUCCESS, payload: data})
     }

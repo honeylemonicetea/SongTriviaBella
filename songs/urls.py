@@ -13,7 +13,7 @@ urlpatterns = [
     path('populate_db/', populate_db_fromspot, name='populate'),
     
     path('songs/', include('rest_framework.urls', namespace='rest_framework')),
-    path('generate/', playlist_songs, name='picked'),
+    # path('generate/all/', playlist_songs, name='picked'),
     path('generate/<str:artist>', playlist_songs, name='picked'),
     path('playlists/', get_playlist, name='playlists'),
     path('playlists/<str:artist>', get_playlist, name='playlists'),
